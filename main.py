@@ -131,7 +131,7 @@ print("...y la interseccion: ", conjunto_interseccion)
 print("Mi conjunto que tiene varios tipos de datos: ", mi_conjunto_3)
 
 # Trabajando con clases
-persona = Persona('Alberto', 'Ayza', 36592920)
+persona = Persona('Alberto', 'Ayza', 123123123)
 persona.saludar()
 print("El dni es: ", persona.get_dni())
 
