@@ -3,6 +3,10 @@ import array
 import time
 from classes.Persona import Persona
 from classes.Student import Student
+from classes.Auto import Auto
+from classes.Avion import Avion
+from classes.Perro import Perro
+from classes.Leon import Leon
 
 # Trabajando con variables
 print("Probando 1,2,3...")
@@ -119,7 +123,7 @@ for mes in meses:
     print(mes)
 print("El valor de Febrero es: ", meses["Febrero"])
 
-# Trabajando con conjuntos (sets)
+# Trabajando con conjuntos (sets) --------------------------------
 mi_conjunto = {1, 2, 3, 4, 5, 6, 7}
 mi_conjunto_2 = {1, 2, 3, 7, 8, 9, 0}
 conjunto_union = mi_conjunto.union(mi_conjunto_2)
@@ -130,7 +134,10 @@ print("La union de mis conjuntos es: ", conjunto_union)
 print("...y la interseccion: ", conjunto_interseccion)
 print("Mi conjunto que tiene varios tipos de datos: ", mi_conjunto_3)
 
-# Trabajando con clases
+# Trabajando con clases -----------------------------
+
+# Herencia:
+# los objetos sobreescriben los métodos del padre
 persona = Persona('Alberto', 'Ayza', 123123123)
 persona.saludar()
 print("El dni es: ", persona.get_dni())
@@ -138,3 +145,28 @@ print("El dni es: ", persona.get_dni())
 estudiante = Student("Alberto", "Ayza", 123123123, 31, 123)
 datos_estudiante = str(estudiante)
 print(datos_estudiante)
+
+# polimorfismo:
+# los objetos implementan los métodos de la interfaz o de la clase abstracta
+
+# Interfaz mediante herencia de clase abstracta:
+auto = Auto()
+auto.arrancar()
+auto.acelerar()
+auto.frenar()
+
+avion = Avion()
+avion.arrancar()
+avion.acelerar()
+avion.frenar()
+
+# Interfaz mediante zope:
+perro = Perro()
+perro.correr()
+perro.comer()
+perro.realizar_sonido()
+
+leon = Leon()
+leon.correr()
+leon.comer()
+leon.realizar_sonido()
